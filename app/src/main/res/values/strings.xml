@@ -1,0 +1,15 @@
+<resources>
+<!--    <string name="app_name">GoPrivate: Browser</string>-->
+
+    <string name="PERSONAL_WEBSITE_LINK">https://bespokefactorydirect.com/shop/?affiliate=E2WB/</string>
+<!--    <string name="PERSONAL_WEBSITE_LINK">http://cashtreealliance.com/</string>-->
+    <string name="FACEBOOK_LINK">https://facebook.com/</string>
+    <string name="PINTEREST_LINK">https://pinterest.com/</string>
+    <string name="INSTAGRAM_LINK">https://instagram.com/</string>
+    <string name="TWITTER_LINK">https://twitter.com/</string>
+    <string name="TUMBLR_LINK">https://tumblr.com/</string>
+    <string name="LINKEDIN_LINK">https://linkedin.com/</string>
+    <string name="QUORA_LINK">https://www.quora.com/</string>
+    <string name="YOUTUBE_LINK">https://youtube.com/</string>
+    <string name="app_name"><![CDATA[Private Browser & Shopping App]]></string>
+</resources>

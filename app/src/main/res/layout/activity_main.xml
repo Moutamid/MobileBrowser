@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/qwe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/googleBtn"
+                    style="@style/top_search_engines"
+                    android:text="Google"
+                    android:textColor="@color/orange_premium" />
+
+                <TextView
+                    android:id="@+id/bingBtn"
+                    style="@style/top_search_engines"
+                    android:text="Bing" />
+
+                <TextView
+                    android:id="@+id/ducduckgoBtn"
+                    style="@style/top_search_engines"
+                    android:text="DuckDuckGo" />
+
+                <TextView
+                    android:id="@+id/yahooBtn"
+                    style="@style/top_search_engines"
+                    android:text="Yahoo" />
+
+                <TextView
+                    android:id="@+id/yandexBtn"
+                    style="@style/top_search_engines"
+                    android:layout_marginEnd="20dp"
+                    android:text="Yandex" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/searViewEdittextMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/rtrt"
+                android:background="@drawable/bg_edit_text_main_top"
+                android:drawableStart="@drawable/ic_baseline_search_24"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/color_dark"
+                android:hint="Search"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color_dark"
+                android:textColorHint="@color/text_color_light" />
+
+            <LinearLayout
+                android:id="@+id/rtrt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="-20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/searchQueryBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:cardBackgroundColor="@color/orange_premium"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="center"
+                        android:scaleX="-1"
+                        android:src="@drawable/ic_baseline_reply_24" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/tabsBtnMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginHorizontal="20dp"
+                    app:cardCornerRadius="7dp"
+                    app:strokeColor="@color/text_color_light"
+                    app:strokeWidth="1dp">
+
+                    <TextView
+                        android:id="@+id/totalTabsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="5dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_dark"
+                        android:textSize="20sp" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <ImageView
+                    android:id="@+id/settingsBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_baseline_more_menu_24"
+                    app:tint="@color/color_dark" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/qwe"
+        android:layout_marginHorizontal="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/banner1"
+                android:src="@drawable/banner1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Popular" />
+
+            <LinearLayout style="@style/horizontal_layout_main">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/left_item_web_main"
+                    android:onClick="MainActivityWebItemsMethod"
+                    android:tag="@string/FACEBOOK_LINK"
+                    app:cardBackgroundColor="@color/facebook_color"
+                    app:cardCornerRadius="@dimen/bg_corner_radius">
+
+                    <ImageView
+                        style="@style/item_icon_main"
+                        android:src="@drawable/facebook" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/right_item_web_main"
+                    android:onClick="MainActivityWebItemsMethod"
+                    android:tag="@string/PINTEREST_LINK"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/bg_corner_radius"
+                    app:strokeColor="@color/text_color_light"
+                    app:strokeWidth="1dp">
+
+                    <ImageView
+                        style="@style/item_icon_main"
+                        android:src="@drawable/pinterest" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/horizontal_layout_main">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/left_item_web_main"
+                    android:onClick="MainActivityWebItemsMethod"
+                    android:tag="@string/INSTAGRAM_LINK"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/bg_corner_radius"
+                    app:strokeColor="@color/text_color_light"
+                    app:strokeWidth="1dp">
+
+                    <ImageView
+                        style="@style/item_icon_main"
+                        android:src="@drawable/instagram" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/right_item_web_main"
+                    android:onClick="MainActivityWebItemsMethod"
+                    android:tag="@string/TWITTER_LINK"
+                    app:cardBackgroundColor="#1da1f3"
+                    app:cardCornerRadius="@dimen/bg_corner_radius">
+
+                    <ImageView
+                        style="@style/item_icon_main"
+                        android:src="@drawable/twitter"
+                        app:tint="@color/white" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/horizontal_layout_main">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/left_item_web_main"
+                    android:onClick="MainActivityWebItemsMethod"
+                    android:tag="@string/TUMBLR_LINK"
+                    app:cardBackgroundColor="@color/tumblr_color"
+                    app:cardCornerRadius="@dimen/bg_corner_radius">
+
+                    <ImageView
+                        style="@style/item_icon_main"
+                        android:src="@drawable/tumblr" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/right_item_web_main"
+                    android:onClick="MainActivityWebItemsMethod"
+                    android:tag="@string/LINKEDIN_LINK"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/bg_corner_radius"
+                    app:strokeColor="@color/text_color_light"
+                    app:strokeWidth="1dp">
+
+                    <ImageView
+                        style="@style/item_icon_main"
+                        android:src="@drawable/linkedin" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/horizontal_layout_main">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/left_item_web_main"
+                    android:onClick="MainActivityWebItemsMethod"
+                    android:tag="@string/QUORA_LINK"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/bg_corner_radius"
+                    app:strokeColor="@color/text_color_light"
+                    app:strokeWidth="1dp">
+
+                    <ImageView
+                        style="@style/item_icon_main"
+                        android:src="@drawable/quora" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/right_item_web_main"
+                    android:onClick="MainActivityWebItemsMethod"
+                    android:tag="@string/YOUTUBE_LINK"
+                    app:cardBackgroundColor="@color/youtube_color"
+                    app:cardCornerRadius="@dimen/bg_corner_radius">
+
+                    <ImageView
+                        style="@style/item_icon_main"
+                        android:src="@drawable/youtube" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/banner2"
+                android:src="@drawable/banner2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Promoted" />
+
+            <LinearLayout style="@style/horizontal_layout_main">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/left_item_web_main"
+                    android:onClick="MainActivityWebItemsMethod"
+                    android:tag="@string/PERSONAL_WEBSITE_LINK"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/bg_corner_radius"
+                    app:strokeColor="@color/text_color_light"
+                    app:strokeWidth="1dp">
+
+                    <ImageView
+                        style="@style/item_icon_main"
+                        android:src="@drawable/ic_main_icon" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/right_item_web_main"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/youtube_color"
+                    app:cardCornerRadius="@dimen/bg_corner_radius">
+
+                    <ImageView
+                        style="@style/item_icon_main"
+                        android:src="@drawable/youtube" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Tabs" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tabs_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00000000" />
+
+            <View
+                android:id="@+id/bottomView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
