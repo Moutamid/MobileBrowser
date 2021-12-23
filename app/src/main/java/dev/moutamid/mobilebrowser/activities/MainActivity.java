@@ -82,14 +82,14 @@ public class MainActivity extends AppCompatActivity {
 
 //        if (Utils.getBoolean("f", true)) {
 //            Utils.store("f", false);
-        new Handler().postDelayed(new Runnable() {
+        /*new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 startActivity(new Intent(MainActivity.this, BrowserActivity.class)
                         .putExtra(Constants.SEARCH_QUERY, getString(R.string.PERSONAL_WEBSITE_LINK))
                         .putExtra(Constants.SEARCH_ENGINE, ""));
             }
-        }, 400);
+        }, 400);*/
 //        }
 
         b.tabsBtnMain.setOnClickListener(new View.OnClickListener() {
@@ -191,14 +191,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private View.OnClickListener topTextViewClickListener(String link) {
-        return new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                currentSearchEngine = link;
+        return view -> {
+            currentSearchEngine = link;
 
-                shiftColor(link);
+            shiftColor(link);
 
-            }
         };
     }
 

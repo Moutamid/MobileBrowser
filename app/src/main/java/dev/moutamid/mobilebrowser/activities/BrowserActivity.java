@@ -42,7 +42,7 @@ public class BrowserActivity extends AppCompatActivity implements AdvancedWebVie
         View view = b.getRoot();
         setContentView(view);
 
-        Utils.changeStatusBarColor(this, R.color.black);
+//        Utils.changeStatusBarColor(this, R.color.black);
 
         webView = (AdvancedWebView) view.findViewById(R.id.webview);
         webView.setListener(this, this);
